@@ -1,0 +1,22 @@
+import discord
+import vars
+class MyClient(discord.Client):
+    async def on_message(self, message):
+        a = 0
+        if message.author == self.user:
+            return
+
+        if message.content.startswith('bagel'):
+            await message.channel.send('bagel')
+
+        if message.content.startswith('sherk bot'):
+            await message.channel.send('my bagel ate him')
+
+        if message.content.startswith('rock moyai rock moyai'):
+            await message.channel.send('You have summon the great moyai no perishnin my might as smight you in dust. If call me right name i will grant one wish. or die your choice') 
+
+
+
+
+client = MyClient()
+client.run('MTAwMjcwMzYwMjIzNTc0ODM3Mg.GYUIvJ.CEWr3CBDe9ZE9Kj-75wHbFWKWLcOfpWqZUIZAc')
